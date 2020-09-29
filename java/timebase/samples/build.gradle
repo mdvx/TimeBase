@@ -1,0 +1,64 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '5.1.0'
+    id 'java'
+    id 'java-library'
+}
+
+sourceCompatibility = 1.8
+
+apply from: "$rootDir/gradle/Deltix.gradle"
+
+repositories {
+    jcenter()
+    mavenLocal()
+    mavenCentral()
+
+    mavenDeltix("Deltix.Java")
+    mavenDeltix("RTMath.Java")
+    mavenDeltix("ThirdParty.Java")
+}
+
+dependencies {
+
+    implementation 'deltix.qsrv.timebase:deltix-timebase-client:6.0.10'
+    implementation 'deltix.qsrv.timebase:deltix-timebase-api:6.0.10'
+
+    implementation 'deltix.qsrv:deltix-timebase-api-messages:6.0.2'
+
+    implementation 'deltix.qsrv:deltix-commons-util:6.0.34'
+    implementation 'deltix.qsrv:deltix-commons-messages:6.0.34'
+	
+    implementation 'deltix:deltix-gflog-api:2.0.32'
+    implementation 'deltix:deltix-gflog-core:2.0.32'
+
+    implementation 'com.google.guava:guava:20.0'
+    
+    // Decimal datatype
+    implementation 'deltix:deltix-dfp:0.10.12'
+
+    testImplementation 'junit:junit:4.12'
+}
+
+// ZIP with sample 
+task makeZIP(type: Zip) {
+    baseName = 'deltix-timebase-tutorial'
+
+    from('.') {
+        include '**/*'
+        exclude '.git/'
+        exclude '.gradle/'
+        exclude '.idea/libraries/'
+        exclude '.idea/vcs.xml'
+        exclude 'build/'
+        exclude 'out/'
+    }
+}
+
+def libDirectory = new File(projectDir, 'lib')
+
+task copyLibs(type: Sync) {
+    from configurations.runtimeClasspath
+    from project.jar.outputs.files
+
+    into libDirectory
+}
