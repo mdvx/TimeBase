@@ -1,0 +1,13 @@
+def epmRtcRepoUrl = project.findProperty("epam.rtc.repository") ?: System.getenv("EPAM_RTC_REPOSITORY") ?: 'FakeRepo'
+
+repositories.ext.mavenEpamRtc = {
+    repositories.maven {
+        url epmRtcRepoUrl
+    }
+}
+
+project.buildscript.repositories.ext.mavenEpamRtc = {
+    repositories.maven {
+        url epmRtcRepoUrl
+    }
+}

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<schema>
+    <command type="service">
+        <name>quantserver.service</name>
+        <className>deltix.qsrv.comm.cat.TomcatService</className>
+    </command>
+
+    <command type="app">
+        <name>qsol</name>
+        <title>QuantServer Solution Generator</title>        
+        <className>deltix.qsrv.cg.ui.WizardFrame</className>
+    </command>
+    
+    <command type="app">
+        <name>tbq</name>
+        <title>TimeBase Query</title>
+        <className>deltix.qsrv.hf.tickdb.tool.qui.SimpleQueryApp</className>
+    </command>
+
+    <command type="app">
+        <name>tdbmgr</name>
+        <className>deltix.qsrv.hf.tickdb.ui.TickDBMain</className>
+        <title>TimeBase Administrator</title>
+    </command>
+
+    <command type="app">
+        <name>oli</name>
+        <title>Offline License Installer</title>
+        <className>deltix.tools.OfflineLicenseClient</className>
+    </command>
+
+    <command type="cmd">
+        <name>olm</name>
+        <title>Offline License Installer</title>
+        <className>deltix.tools.OfflineLicenseManager</className>
+    </command>
+
+    <command type="app">
+        <name>tbspeed</name>
+        <title>TimeBase Speed Test</title>
+        <className>deltix.qsrv.hf.ui.speedtest.SpeedTestWidget</className>
+    </command>
+
+    <command type="app">
+        <name>tbrep</name>
+        <title>TimeBase Repair Shop</title>
+        <className>deltix.qsrv.hf.ui.repair.RepApp</className>
+    </command>
+
+    <command type="app">
+        <name>qsadmin</name>
+        <title>QuantServer Architect</title>
+        <splash>bin/splash.jpg</splash>
+        <jvmArgs>-Dsun.java2d.d3d=false</jvmArgs>
+        <className>deltix.installer.admin.top.QSAdminMain</className>
+    </command>
+
+    <command type="cmd">
+        <name>tblatency</name>
+        <className>deltix.tools.LatencyTest</className>
+    </command>
+
+    <command type="cmd">
+        <name>tbrecover</name>
+        <className>deltix.qsrv.hf.ui.repair.TBRecover</className>
+    </command>
+
+    <command type="cmd">
+        <name>watchdog</name>
+        <className>deltix.util.os.WatchdogService</className>
+    </command>
+
+    <command type="cmd">
+        <name>solgen</name>
+        <className>deltix.qsrv.cg.common.SolutionGeneratorCmd</className>
+    </command>
+
+    <command type="cmd">
+        <name>sollaunch</name>
+        <className>deltix.qsrv.cg.common.SolutionLauncherCmd</className>
+    </command>
+
+<!--    <command type="cmd">
+        <name>ticksmith</name>
+        <className>deltix.custom.ticksmith.TSLoaderMain</className>
+    </command>-->
+
+    <command type="cmd">
+        <name>lmgr</name>
+        <className>deltix.installer.admin.tools.CLILaunchManager</className>
+    </command>
+
+    <command type="cmd">
+        <name>testdbcreate</name>
+        <className>deltix.qsrv.testsetup.TickDBCreator</className>
+    </command>
+
+    <command type="cmd">
+        <name>csv</name>
+        <className>deltix.util.csvx.CSVFilter</className>
+    </command>
+
+    <command type="cmd">
+        <name>dxversion</name>
+        <className>deltix.util.Version</className>
+    </command>
+
+    <command type="cmd">
+        <name>tdbfeedsim</name>
+        <className>deltix.qsrv.hf.tickdb.tool.SimpleFeedSimulator</className>
+    </command>
+
+<!--    <command type="cmd">
+        <name>lsbuild</name>
+        <className>deltix.tools.deps.LicenseServerBuilder</className>
+    </command>-->
+
+    <command type="cmd">
+        <name>tickdb</name>
+        <className>deltix.qsrv.hf.tickdb.ui.tbshell.TickDBShell</className>
+    </command>
+
+    <command type="cmd">
+        <name>tbmigrator</name>
+        <className>deltix.qsrv.hf.tickdb.tool.TBMigrator</className>
+    </command>
+
+    <command type="cmd">
+        <name>aggshell</name>
+        <className>deltix.qsrv.hf.aggregator.AggregatorShell</className>
+    </command>
+
+    <command type="cmd">
+        <name>dtb</name>
+        <className>deltix.qsrv.dtb.store.tools.shell.DTBShell</className>
+    </command>
+
+    <command type="cmd">
+        <name>tdbserver</name>
+        <className>deltix.qsrv.hf.tickdb.comm.server.TDBServerCmd</className>
+    </command>
+
+    <command type="cmd">
+        <name>tbrepshell</name>
+        <className>deltix.qsrv.hf.ui.repair.RepAppShell</className>
+    </command>
+
+    <command type="cmd">
+        <name>qsshell</name>
+        <className>deltix.qsrv.comm.cat.launcher.QSShell</className>
+    </command>
+
+    <command type="cmd">
+        <name>dxserial</name>
+        <className>deltix.installer.tools.SerialNumber</className>
+    </command>
+
+    <command type="cmd">
+        <name>flate</name>
+        <className>deltix.util.io.Flater</className>
+    </command>
+
+    <command type="cmd">
+        <name>javatime</name>
+        <className>deltix.tools.TimeTool</className>
+    </command>
+
+    <command type="cmd">
+        <name>keygen</name>
+        <className>deltix.util.security.Manager</className>
+    </command>
+
+    <command type="cmd">
+        <name>licenseserver</name>
+        <className>deltix.lsrv.comm.cat.TomcatCmd</className>
+    </command>
+
+    <command type="cmd">
+        <name>datecode</name>
+        <className>deltix.tools.license.DateEncoder</className>
+    </command>
+	
+	<command type="cmd">
+        <name>uacconf</name>
+        <className>deltix.qsrv.hf.security.SecurityConfigurator</className>
+    </command>
+    
+    <command type="cmd">
+        <name>lg</name>
+        <className>deltix.util.license.LicenseGenerator</className>
+    </command>
+
+    <command type="cmd">
+        <name>tcplog</name>
+        <className>deltix.util.net.TCPLogger</className>
+    </command>
+
+    <command type="cmd">
+        <name>uac</name>
+        <className>deltix.qsrv.hf.security.repository.UserDirectoryShell</className>
+    </command>
+
+    <command type="cmd">
+        <name>quantserver</name>
+        <config>srvenv</config>
+        <className>deltix.qsrv.comm.cat.TomcatCmd</className>
+    </command>
+
+    <command type="cmd">
+        <name>mond</name>
+        <config>srvenv</config>
+        <className>deltix.snmp.mond.top.MainWithTomcat</className>
+    </command>
+
+    <command type="cmd">
+        <name>uhfs</name>
+        <config>srvenv</config>
+        <className>deltix.qsrv.comm.cat.TomcatCmd</className>
+	    <args>-uhf</args>
+    </command>
+
+    <command type="cmd">
+        <name>qsagg</name>
+        <config>srvenv</config>
+        <className>deltix.qsrv.comm.cat.TomcatCmd</className>
+        <args>-agg</args>
+    </command>
+
+    <command type="cmd">
+        <name>l2converter</name>
+        <config>srvenv</config>
+        <className>deltix.qsrv.hf.pub.L2Converter</className>
+    </command>
+
+    <command type="cmd">
+        <name>s3replica</name>
+        <className>deltix.qsrv.hf.tickdb.tool.TBS3Replicator</className>
+    </command>
+
+    <command type="cmd">
+        <name>s3import</name>
+        <className>deltix.qsrv.hf.tickdb.tool.S3Importer</className>
+    </command>
+
+</schema>

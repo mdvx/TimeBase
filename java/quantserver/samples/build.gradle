@@ -1,0 +1,40 @@
+group = 'deltix.qsrv.quantserver'
+
+dependencies {
+    compile project(':java:timebase:client')
+    compile project(':java:timebase:server')
+    compile project(':java:timebase:api')
+
+    compile ('deltix.qsrv:deltix-commons-lang')
+    compile ('deltix.qsrv:deltix-commons-util')
+    compile ('deltix.qsrv:deltix-commons-messages')
+
+    compile('deltix:rtmath-containers')
+
+    compile ('deltix:deltix-thread-affinity')
+
+    compile ('deltix.qsrv:deltix-timebase-api-messages')
+    compile ('deltix:rtmath-containers')
+    implementation 'com.google.guava:guava'
+
+    compile 'junit:junit:4.12'
+
+    implementation 'deltix:deltix-gflog-jul',
+            'deltix:deltix-gflog-dcl',
+            'deltix:deltix-gflog-mail'
+
+    /*
+    // Implicit dependencies of this module:
+
+    // JMS API
+    compile('org.apache.qpid:qpid-jms-client:0.11.1') { transitive = false }
+    compile 'org.glassfish.main.javaee-api:javax.jms:3.1.2.2'
+
+    // AMQP API
+    compile('org.apache.qpid:qpid-amqp-1-0-client:0.32')
+
+    // Hadoop API
+    compile('org.apache.hadoop:hadoop-common'){ transitive = false }
+    compile('org.apache.hadoop:hadoop-mapreduce-client-core:2.6.0'){ transitive = false }
+    */
+}
